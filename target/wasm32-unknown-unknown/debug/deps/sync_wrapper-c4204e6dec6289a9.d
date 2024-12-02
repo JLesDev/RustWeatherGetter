@@ -1,0 +1,7 @@
+/home/jonty/Documents/hot_or_not_3/target/wasm32-unknown-unknown/debug/deps/libsync_wrapper-c4204e6dec6289a9.rmeta: /home/jonty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-1.0.2/src/lib.rs
+
+/home/jonty/Documents/hot_or_not_3/target/wasm32-unknown-unknown/debug/deps/libsync_wrapper-c4204e6dec6289a9.rlib: /home/jonty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-1.0.2/src/lib.rs
+
+/home/jonty/Documents/hot_or_not_3/target/wasm32-unknown-unknown/debug/deps/sync_wrapper-c4204e6dec6289a9.d: /home/jonty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-1.0.2/src/lib.rs
+
+/home/jonty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-1.0.2/src/lib.rs:
