@@ -1,6 +1,6 @@
-<h align="center">
+<h1 align="center">
 RUST WEATHER GETTER
-</h>
+</h1>
 
 <p align="center">
   <p align="center">A stupid simple program to display weather information with concise, accurate information. The program's functions were created using Rust and compiled with WASM.
