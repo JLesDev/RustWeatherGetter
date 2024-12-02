@@ -1,3 +1,7 @@
+<h align="center">
+RUST WEATHER GETTER
+</h>
+
 <p align="center">
   <p align="center">A stupid simple program to display weather information with concise, accurate information. The program's functions were created using Rust and compiled with WASM.
   </p>
@@ -10,6 +14,3 @@ It is currently the only all-platform accessible weather application with no ads
   </div>
 
 </p>
-# RustWeatherGetter
-# RustWeatherGetter
-# RustWeatherGetter
