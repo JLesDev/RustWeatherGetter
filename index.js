@@ -110,7 +110,36 @@ async function run() {
       readMoreButton.setAttribute("id", "readMoreButt");
       document.getElementById("feels-div").appendChild(readMoreButton);
       var buttonText = document.getElementById("readMoreButt");
-      buttonText.innerHTML = "Read More...";
+      buttonText.innerHTML = "Display more";
+      buttonText.onClick = readMore();
+
+      var dotsi = document.createElement("span");
+      dotsi.setAttribute("id", "dots");
+      dotsi.style.display = "none";
+      document.getElementById("feels-div").appendChild(dotsi);
+      var buttonText = document.getElementById("readMoreButt");
+      buttonText.innerHTML = "Display more";
+      buttonText.onClick = readMore();
+
+      /*
+      function readMore() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Display more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Display less"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+
+      */
       
       
       })
@@ -166,135 +195,5 @@ async function run() {
 
   printAddress();
 
-/*
-  const prom = Promise.resolve(weathers);
-
-  prom
-    .then((value) => {
-      console.log(value.WeatherData.name); //This is a fulfilled promise  👈
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-
-  const promise1 = Promise.resolve(weathers);
-
-  promise1.then((value) => {
-    console.log(value.WeatherData);
-    // Expected output: 123
-  });
-  console.log(Promise.resolve(weathers));
-  console.log(decodeURIComponent(weathers));
-
-  const promise = Promise.resolve("This is a fulfilled promise");
-  */
-
-
-
-  //big = await doSomething();
-
-  // console.log(big);
-
-  /*
-  get_weather_name("London") //1
-    .then((names) => {
-      // console.log(names.WeatherData.name); //3
-    });
-
-
-  get_weather_name("London").then(meta => {
-    console.log(meta);
-
-  });
-
-  (async () => {
-    const meta = await get_weather_name("London");
-    console.log(meta);
-  })();
-  return;
-}
-*/
 }
 run();
-
-/*
-const runWasm = async () => {
-  // Instantiate our wasm module
-  const rustWasm = await wasmInit("./pkg/hot_or_not_3_bg.wasm");
-
-  console.log("hi");
-  // Call the Add function export from wasm, save the result
-  //const result = rustWasm.add(24, 24);
-  let weathers = rustWasm.get_weather_name("London");
-  //const weather = "Hi";
-  console.log(weathers);
-  //console.log(result);
-
-  //console.log(result); // Should output '72'
-  //console.log(rustWasm.ADD_CONSTANT); // Should output 'undefined'
-  //console.log(rustWasm.add_integer_with_constant); // Should output 'undefined'
-  document.body.textContent = "My WASM website";
-  document.body.textContent = "My WASM website. It is good.";
-  //document.body.textContent = weather;
-  var x = document.createElement("HEADER");
-  var t = document.createElement("HEADER");
-  var z = document.createElement("BUTTON");
-  x.setAttribute("color", "green");
-  x.setAttribute("id", "myHeader");
-  t.setAttribute("id", "myHeader2");
-  z.setAttribute("id", "myButton");
-  document.body.appendChild(x);
-  document.body.appendChild(z);
-  document.body.appendChild(t);
-  document.getElementById("myHeader").style.color = "light grey";
-  document.getElementById("myButton").style.color = "blue";
-  document.getElementById("myButton").body = "Wow";
-  document.getElementById("myButton").innerHTML = "This is a button";
-  var button = document.getElementById("myButton");
-  button.style.width = "200px";  // Set the width
-  button.style.height = "100px"; // Set the height
-  button.style.fontSize = "20px"; // Increase font size
-  button.style.borderRadius = "40px";
-  button.style.font = "Helvetica";
-  button.style.backgroundColor = "lightBlue";
-  let isBig = 0;
-  button.onclick = function () {
-    if (isBig === 0) {
-      button.style.height = "200px"
-      button.style.width = "400px";
-      document.getElementById("myButton").innerHTML = isBig + 1;
-      isBig++;
-    }
-    else if (isBig === 1) {
-      button.style.width = "400px";
-      button.style.height = "400px";
-      document.getElementById("myButton").innerHTML = isBig + 1;
-      isBig++;
-    }
-    else if (isBig === 2) {
-      button.style.height = "400px";
-      button.style.width = "200px";
-      document.getElementById("myButton").innerHTML = isBig + 1;
-      isBig++;
-    }
-    else if (isBig === 3) {
-      button.style.width = "200px";
-      button.style.height = "200px"
-      document.getElementById("myButton").innerHTML = isBig + 1;
-      isBig = 0;
-    }
-    else {
-      button.style.width = "200px";
-      button.style.height = "200px"
-      document.getElementById("myButton").innerHTML = isBig + 1;
-      isBig++;
-    }
-  };
-  var y = document.createElement("H1");
-  var o = document.createTextNode("This is a website");
-  y.appendChild(o);
-  document.getElementById("myHeader").appendChild(y);
-
-};
-runWasm();
-*/
