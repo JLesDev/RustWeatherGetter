@@ -8,23 +8,6 @@ use reqwest;
 use serde::Deserialize;
 use std::thread;
 
-// Our Add function
-// wasm-pack requires "exported" functions
-// to include #[wasm_bindgen]
-
-
-// pub async fn process(location: String) -> Result<WeatherData, reqwest::Error> {
-//     let api_key = "0bbb9c9325374a15aeb51644242611";
-//     let url = format!(
-//         "http://api.weatherapi.com/v1/current.json?key={}&q={}&aqi=no",
-//         api_key, location
-//     );
-
-//     let response = reqwest::get(&url).await?.json::<WeatherData>().await?;
-//     Ok(response)
-// }
-
-
 #[wasm_bindgen]
 #[no_mangle]
 pub async extern fn get_url(locan: String, API: String) -> String {
