@@ -70,6 +70,8 @@ async function run() {
       document.getElementById("feels-div").appendChild(feelsLike);
       document.getElementById("feelsLikeText").textContent = city.current.feelslike_c + "° C";
 
+      document.getElementById("feels").textContent = "Feels Like";
+
       let day = "night";
       if(city.current.is_day == 0){
         day = "night";
@@ -105,7 +107,7 @@ async function run() {
       long.setAttribute("id", "longText");
       document.getElementById("feels-div").appendChild(long);
       document.getElementById("longText").textContent = "It is " + day + "time and the humidity is " + city.current.humidity + "%. The UV index is " + city.current.uv + uv;
-
+      /*
       var readMoreButton = document.createElement("button");
       readMoreButton.setAttribute("id", "readMoreButt");
       document.getElementById("feels-div").appendChild(readMoreButton);
@@ -120,7 +122,7 @@ async function run() {
       var buttonText = document.getElementById("readMoreButt");
       buttonText.innerHTML = "Display more";
       buttonText.onClick = readMore();
-
+            */
       /*
       function readMore() {
     var dots = document.getElementById("dots");
