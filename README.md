@@ -7,6 +7,8 @@ RUST WEATHER GETTER
   </p>
 <p align="center">
 It is all-platform accessible with no ads or payments required.
+
+PR's and feedback welcome!
   
   </p>
   <div align=center align-items="center">
