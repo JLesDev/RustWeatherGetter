@@ -6,9 +6,9 @@ RUST WEATHER GETTER
   <p align="center">A stupid simple program to display weather information with concise, accurate information. The program's functions were created using Rust and compiled with WASM.
   </p>
 <p align="center">
-It is all-platform accessible with no ads or payments required.
+It is all-platform accessible with no ads or payments required!
 
-PR's and feedback welcome!
+
   
   </p>
   <div align=center align-items="center">
