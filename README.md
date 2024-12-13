@@ -3,7 +3,7 @@ RUST WEATHER GETTER
 </h1>
 
 <p align="center">
-  <p align="center">A stupid simple program to display weather information with concise, accurate information. The program's functions were created using Rust and compiled with WASM. BYO API key.
+  <p align="center">A stupid simple program to display weather information with concise, accurate information. The program's functions were created using Rust and compiled with WASM. BYO API key!
   </p>
 <p align="center">
 It is all-platform accessible with no ads or payments required!
