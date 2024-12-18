@@ -64,8 +64,6 @@ pub async extern fn get_weather_name(location: String) -> String {
                 Err(e) => return format!("Error: {e}"),
             };
 
-            //let nam = "name".to_string();
-
             let a: WeatherData = weather;
             let weather_name: String = a.name;
             weather_name.to_string()
