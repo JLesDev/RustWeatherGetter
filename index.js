@@ -1,30 +1,6 @@
-/*// Import our outputted wasm ES6 module
-// Which, export default's, an initialization function
-import init from "./pkg/hello_world.js";
-
-const runWasm = async () => {
-  // Instantiate our wasm module
-  const helloWorld = await init("./pkg/hello_world_bg.wasm");
-
-  // Call the Add function export from wasm, save the result
-  const addResult = helloWorld.add(24, 24);
-
-  // Set the result onto the body
-  document.body.textContent = `Hello World! addResult: ${addResult}`;
-};
-runWasm();
-*/
-
-
-// import wasmInit from "./pkg/hot_or_not_3.js";
-
 import init, { get_weather_name, get_url } from './pkg/hot_or_not_3.js';
 
-//import add from "pkg/exports.js";
-
 await init();
-
-//console.log(add(weather));
 
 async function run() {
   await init();
@@ -48,17 +24,15 @@ async function run() {
     headers: headers,
     body: JSON.stringify(url),
   };
-  //document.body.textContent = "hi";
 
   console.log(response);
 
 
-  await fetch(String(url)) //1
-    .then((response) => response.json()) //2
+  await fetch(String(url)) 
+    .then((response) => response.json()) 
     .then((city) => {
       console.log(city);
-      //document.body.textContent = city.current.temp_c;
-      let ci = city.current.temp_c; //3
+      let ci = city.current.temp_c; 
       var z = document.createElement("h1");
       z.setAttribute("id", "placeholder");
       document.body.appendChild(z);
@@ -107,55 +81,14 @@ async function run() {
       long.setAttribute("id", "longText");
       document.getElementById("feels-div").appendChild(long);
       document.getElementById("longText").textContent = "It is " + day + "time and the humidity is " + city.current.humidity + "%. The UV index is " + city.current.uv + uv;
-      /*
-      var readMoreButton = document.createElement("button");
-      readMoreButton.setAttribute("id", "readMoreButt");
-      document.getElementById("feels-div").appendChild(readMoreButton);
-      var buttonText = document.getElementById("readMoreButt");
-      buttonText.innerHTML = "Display more";
-      buttonText.onClick = readMore();
-
-      var dotsi = document.createElement("span");
-      dotsi.setAttribute("id", "dots");
-      dotsi.style.display = "none";
-      document.getElementById("feels-div").appendChild(dotsi);
-      var buttonText = document.getElementById("readMoreButt");
-      buttonText.innerHTML = "Display more";
-      buttonText.onClick = readMore();
-            */
-      /*
-      function readMore() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Display more"; 
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Display less"; 
-      moreText.style.display = "inline";
-    }
-  }
-
-
-      */
-      
-      
       })
     .then((temp) => {
-      //temp = temp.current.temp_c; //3
     }
     );
-  //document.body.textContent = temp;
 
   var z = document.createElement("h1");
   z.setAttribute("id", "placeholder");
   document.body.appendChild(z);
-  //document.getElementById("myHead").style.color = "light grey";
-  // document.getElementById("placeholder").textContent = ci + " degrees celsius.";
 
   var feels = document.createElement("h2");
   feels.setAttribute("id", "feels");
