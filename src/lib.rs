@@ -1,6 +1,4 @@
 use tokio::sync::oneshot;
-// The wasm-pack uses wasm-bindgen to build and generate JavaScript binding file.
-// Import the wasm-bindgen crate.
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::spawn_local;
 use std::{sync::mpsc, time::Duration};
@@ -16,7 +14,6 @@ pub async extern fn get_url(locan: String, API: String) -> String {
 
     let (tx, rx) = oneshot::channel::<String>();
     spawn_local(async move {
-        // tx.send("Hello".to_string()).unwrap();
 
                 let api_key = API;
                 let url = format!(
